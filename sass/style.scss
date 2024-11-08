@@ -4,19 +4,19 @@
 }
 html, body {
     margin: 0;
-    /*height:100%;*/
+    scroll-padding-top: 60px;
 }
 .logo {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     font-size: 16px;
+    color: whitesmoke;
 }
 
 header {
     color: whitesmoke;
     height: 100vh;
     text-align: center;
-    background-image: url(../images/pexels-bibekghosh-14553701.jpg);
+    background-image: url(../images/pexels-daniel-smyth-83914874-11195817.jpg);
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -24,24 +24,23 @@ header {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 2%;
     h1 {
         font-size: 48px;
-        vertical-align: center;
         text-align: center;
         font-variant: small-caps;
         padding-top: 10px;
+        color: whitesmoke;
     }
     span {
-        padding-top: 20px;
         text-transform: uppercase;
-        font-size: 20px;
-        vertical-align: center;
+        font-size: 16px;
         text-align: center;
     }
     p {
         padding-top: 10px;
+        padding-bottom: 10px;
         font-size: 14px;
-        vertical-align: center;
         text-align: center;
     }
     button {
@@ -51,8 +50,7 @@ header {
         color: black;
         text-transform: lowercase;
         font-size: 14px;
-        border: 2px solid whitesmoke;
-        margin-top: 40px;
+        border: 2px solid rgba(245, 245, 245, 0.87);
         border-radius: 14px;
         border-bottom-right-radius: 0;
     } 
@@ -63,13 +61,15 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    color: #FFF;
-    height: 60px;
+    color: whitesmoke;
+    height: 50px;
     padding: 1em;
-    position: fixed;
-    z-index: 3;
     width: 100%;
     font-size: 16px;
+    position: fixed;
+    background-color:#333;
+    opacity: 0.9;
+    z-index: 3;
     svg {
         width: 20px;
         height: 20px;
@@ -122,7 +122,7 @@ header {
 .menu-button::before,
 .menu-button::after {
     display: block;
-    background-color: #fff;
+    background-color: whitesmoke;
     position: absolute;
     height: 4px;
     width: 30px;
@@ -156,7 +156,7 @@ header {
 .contact,
 .reviews {
     text-align: center;
-    margin: 20px 80px 20px;
+    margin: 40px 15% 40px;
     h2 {
         text-transform: uppercase;
         font-weight: bold;
@@ -171,8 +171,6 @@ header {
 }
 
 .what-we-do {
-    margin: 20px 20% 20px;
-    padding: 0 10px 0;
     align-content: center;
     text-align: center;
     height: 300px;
@@ -199,60 +197,82 @@ header {
 }
 
 .about {
-    margin: 20px 20% 20px;
     align-content: center;
     display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: 20% 60% 20%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 33.33% 33.33% 33.33%;
+    align-items: center;
+    text-align: left;
     img {
-    width: 200px;
-    height: 200px;
+    width: 70%;
+    height: 100%;
     grid-row: 1 / 4;
     grid-column: 1;
     align-self: center;
-    padding: 20px;
+    justify-self: center;
     }
     h2 {
     grid-row: 1;
     grid-column: 2;
+    align-self: center;
     }
     p {
     grid-row: 2;
     grid-column: 2;
     padding-top: 0px;
+    align-self: center;
     }
     button {
     grid-row: 3;
     grid-column: 2;
-    width: 100px;
+    width: 120px;
     height: 30px;
     background-color: black;
     color: white;
     border-radius: 16px 16px 0px 16px;
     align-self: center;
+    font-size: 12px;
     }
 }
+.portfolio {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: left;
+}
+.portfolio h2,
+.portfolio p {
+    padding-bottom: 20px;
+}
+
 .portfolio-images {
-    margin: 0;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-.photo-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 20px;
-    max-width: 600px;
-    padding: 20px;
-}
-.photo img {
+    height: 550px;
     width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px;
+    .image1 {
+        float:left;
+        width:55%;
+        height:50%;
+        object-fit: cover;
+    }
+    .image2 {
+        float:left;
+        width:45%;
+        height:50%;
+        object-fit: cover;
+    }
+    .image3 {
+        float:left;
+        width:45%;
+        height:50%;
+        object-fit: cover;
+    }
+    .image4 {
+        float:left;
+        width:55%;
+        height:50%;
+        object-fit: cover;
+    }
 }
+
 
 .dark-bar {
     background-color: #333;
@@ -454,8 +474,36 @@ footer {
     }
     section h2 {
         font-size: 14px;
-    }
+    }   
 }
+
+@media (max-width: 700px) {
+    .what-we-do {
+        text-align: center;
+        .circle-icon {
+            display: none;
+        }
+        .what-we-do-grid {
+            display: block;
+            text-transform: uppercase;
+            text-decoration: underline #ffc107 dotted 1px;
+            font-weight: bold;
+        }
+    }
+    .portfolio-images img {
+        float: none !important;
+        width:100% !important;
+        height: auto !important;
+        padding: 10px;
+    }
+    .about {
+        display: block;
+    }
+    .about img {
+        display: none;
+    }  
+}
+
 @media (min-width: 1000px) {
     .hidden {
       display: none;
