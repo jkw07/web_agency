@@ -69,7 +69,7 @@ header {
     position: fixed;
     z-index: 3;
     width: 100%;
-    font-size: 20px;
+    font-size: 16px;
     svg {
         width: 20px;
         height: 20px;
@@ -149,11 +149,14 @@ header {
     transform: rotate(-405deg);
 }
 
-.what_we_do,
+.what-we-do,
 .about,
-.portfolio {
+.portfolio,
+.form,
+.contact,
+.reviews {
     text-align: center;
-    padding-top: 20px;
+    margin: 20px 80px 20px;
     h2 {
         text-transform: uppercase;
         font-weight: bold;
@@ -165,7 +168,6 @@ header {
 }
 .line-through {
     text-decoration: line-through orange solid 1px;
-    text-decoration-color: orange;
 }
 
 .what-we-do {
@@ -337,36 +339,59 @@ header {
 
 .contact-and-footer {
     background-color: black;
-    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 80px;
+    opacity: 0.8;
 }
 footer {
     box-sizing: border-box;
-    background-color: black;
     color: white;
     align-content: center;
     justify-self: center;
     width: 400px;
     border-top: 1px dotted white;
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
 }
 .contact {
     box-sizing: border-box;
     color: white;
-    background-color: black;
-    margin: 0;
-    padding: 0;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     justify-content: space-between;
+    text-align: left;
+    h3 {
+        font-size: 20px;
+        padding-bottom: 20px;
+    }
+    p {
+        font-size: 14px;
+    }
 }
-.instagram {
-    display: grid;
-     grid:
-      "i i" 33.33%
-      "i i" 33.33%
-      "i i" 33.33%
-      / 50% 50%;
+.contact > div {
+    padding-top: 20px;
+}
+.address {
+    padding-left: 60px;
+}
+.address i {
+    font-size: 15px;
+    padding-right: 15px;
+}
+.instagram i {
+    font-size: 36px;
+}
+.newsletter {
+    text-align: left;
+    button, input {
+        display: block;
+        margin-bottom: 15px;
+    }
+    i {
+      margin-right: 15px;
+      font-size: 15px;  
+    }
 }
 
 @media (max-width: 1000px) {
