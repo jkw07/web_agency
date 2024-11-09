@@ -228,7 +228,7 @@ header {
     width: 120px;
     height: 30px;
     background-color: black;
-    color: white;
+    color: whitesmoke;
     border-radius: 16px 16px 0px 16px;
     align-self: center;
     font-size: 12px;
@@ -276,17 +276,19 @@ header {
 
 .dark-bar {
     background-color: #333;
-    color: #fff;
+    color: whitesmoke;
     display: flex;
     justify-content: space-around;
     padding: 40px 0;
     text-align: center;
     .stat h2 {
     font-size: 24px;
+    font-weight: bold;
     margin: 0;
     }
     .stat p {
     font-size: 14px;
+    font-weight: bold;
     margin: 5px 0 0;
     }
 }
@@ -297,7 +299,7 @@ header {
     align-items: center;
     align-content: center;
     height: 100vh;
-    margin: 20px 200px 20px;
+    margin: 20px 100px 20px;
     h2 {
         text-transform: uppercase;
         margin-bottom: 40px;
@@ -309,7 +311,7 @@ header {
     padding: 40px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 400px;
+    width: 50%;
 }
 .callback-form {
     display: flex;
@@ -317,7 +319,7 @@ header {
     gap: 15px;
     .form-input, .form-textarea {
     width: 100%;
-    padding: 10px 15px;
+    padding: 20px 15px;
     border: 2px solid #ccc;
     border-radius: 25px;
     font-size: 14px;
@@ -336,7 +338,7 @@ header {
     color: #fff;
     border: none;
     border-radius: 25px;
-    padding: 10px 20px;
+    padding: 20px 20px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -366,17 +368,17 @@ header {
 }
 footer {
     box-sizing: border-box;
-    color: white;
+    color: whitesmoke;
     align-content: center;
     justify-self: center;
     width: 400px;
-    border-top: 1px dotted white;
+    border-top: 1px dotted whitesmoke;
     text-align: center;
     font-size: 12px;
 }
 .contact {
     box-sizing: border-box;
-    color: white;
+    color: whitesmoke;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     justify-content: space-between;
@@ -447,7 +449,7 @@ footer {
       margin: 0;
       padding: 0.5em 0;
       width: 100%;
-      color: white;
+      color: whitesmoke;
       background-color: #222;
     }
     .menu > li:not(:last-child) {
@@ -474,34 +476,121 @@ footer {
     }
     section h2 {
         font-size: 14px;
-    }   
+    }
+    .dark-bar {
+        margin: 100px 0;
+        .stat h2 {
+            font-size: 16px;
+            padding-top: 10px;
+            padding-bottom: 0;
+        }
+        .stat p {
+            font-size: 14px;
+            padding: 0;
+        }
+    }
 }
 
 @media (max-width: 700px) {
+    .top-nav {
+        padding-right: 40px;
+        font-size: 14px;
+    }
     .what-we-do {
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 100px;
+    }
+    .what-we-do-grid {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center;
+        .icon {
+            text-align: center;
+            margin: 3px;
+            padding: 2px;
+        }
         .circle-icon {
-            display: none;
+            padding: 2px;
         }
-        .what-we-do-grid {
-            display: block;
-            text-transform: uppercase;
-            text-decoration: underline #ffc107 dotted 1px;
-            font-weight: bold;
-        }
+    }
+    .about, .portfolio {
+        text-align: center;
+    }
+    .form {
+        margin: 40px 0;
+        padding: 0;
+        height:fit-content;
+    }
+    .form-container {
+        margin: auto;
+        padding: 0;
+        font-size: 14px;
+        width: 80%;
+    }
+    .callback-form {
+        margin: 0;
+        padding: 0;
     }
     .portfolio-images img {
         float: none !important;
-        width:100% !important;
-        height: auto !important;
-        padding: 10px;
+        width: 50% !important;
+        margin: auto;
     }
-    .about {
+    .portfolio {
         display: block;
     }
-    .about img {
-        display: none;
-    }  
+    .portfolio-images {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .about {
+        display: flex;
+        flex-direction: column;
+    }
+    .map {
+        margin-bottom: 10px;
+    }
+    .dark-bar {
+        margin: 20px 0;
+        display: block !important;
+        .stat h2 {
+            font-size: 16px;
+            padding-top: 10px;
+            padding-bottom: 0;
+        }
+        .stat p {
+            font-size: 12px;
+            padding: 0;
+        }
+    }
+    .contact-and-footer {
+        .contact {
+            display: block;
+            text-align: center;
+            margin: 10px;
+            padding: 10px;
+            .address {
+                padding-left: 0;
+            }
+            .newsletter {
+                text-align: center;
+                input, button {
+                    margin: 20px auto;
+                }
+            }
+        }
+        footer {
+            text-align: center;
+            margin: auto;
+        }
+    }
+}
+@media (max-width: 375px) {
+    .what-we-do {
+        margin-bottom: 300px;
+    }
 }
 
 @media (min-width: 1000px) {
