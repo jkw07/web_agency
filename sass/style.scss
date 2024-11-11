@@ -173,7 +173,6 @@ header {
 .what-we-do {
     align-content: center;
     text-align: center;
-    height: 300px;
     .circle-icon {
         width: 80px;
         height: 80px;
@@ -499,7 +498,6 @@ footer {
     .what-we-do {
         display: flex;
         flex-direction: column;
-        margin-bottom: 100px;
     }
     .what-we-do-grid {
         display: flex !important;
@@ -585,11 +583,6 @@ footer {
             text-align: center;
             margin: auto;
         }
-    }
-}
-@media (max-width: 375px) {
-    .what-we-do {
-        margin-bottom: 300px;
     }
 }
 
