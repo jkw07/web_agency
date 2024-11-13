@@ -42,10 +42,10 @@
         <button type="button" href="#contact">Contact us</button>
     </header>
 
-    <section class="what-we-do" id="what-we-do">
+    <section class="what-we-do section-container" id="what-we-do">
         <h2><span class="line-through">&nbsp;&nbsp;</span>What we do?<span class="line-through">&nbsp;&nbsp;</span></h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dapibus lacus sed condimentum pulvinar. Nulla eget suscipit nisi.</p>
-        <div class="what-we-do-grid">
+        <div class="what-we-do-container">
             <div class="icon icon1">
                 <div class="circle-icon">
                     <i class="fa-solid fa-square-poll-vertical"></i>
@@ -79,25 +79,25 @@
         </div>
     </section>
 
-    <section class="about" id="about">
+    <section class="about section-container" id="about">
         <img src="/images/pexels-drew-williams-1285451-3143791.jpg" alt="image1"/>
         <h2><span class="line-through">&nbsp;&nbsp;</span>Who we are?<span class="line-through">&nbsp;&nbsp;</span></h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dapibus lacus sed condimentum pulvinar. Nulla eget suscipit nisi. Donec ac aliquet massa.Donec ac aliquet massa.Donec ac aliquet massa.Donec ac aliquet massa.</p>
         <button type="button">Read more</button>
     </section>
 
-    <section id="portfolio" class="portfolio">
+    <section class="portfolio section-container" id="portfolio">
         <h2><span class="line-through">&nbsp;&nbsp;</span>Creative works<span class="line-through">&nbsp;&nbsp;</span></h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus interdum vulputate dolor. Proin accumsan viverra magna a ornare.</p>
         <div class="portfolio-images">
-            <img src="/images/pexels-apasaric-325185.jpg" alt="image1" class="image1"/>
-            <img src="/images/pexels-fauxels-3183183.jpg" alt="image2" class="image2"/>
-            <img src="/images/pexels-pixabay-326576.jpg" alt="image3" class="image3"/>
-            <img src="/images/pexels-pixabay-372748.jpg" alt="image4" class="image4"/>
+            <img src="/images/pexels-apasaric-325185.jpg" alt="image1" class="image1 portfolio-image"/>
+            <img src="/images/pexels-fauxels-3183183.jpg" alt="image2" class="image2 portfolio-image"/>
+            <img src="/images/pexels-pixabay-326576.jpg" alt="image3" class="image3 portfolio-image"/>
+            <img src="/images/pexels-pixabay-372748.jpg" alt="image4" class="image4 portfolio-image"/>
         </div>
     </section>
 
-    <section class="reviews">
+    <section class="reviews section-container">
         <h2><span class="line-through">&nbsp;&nbsp;</span>What customers say<span class="line-through">&nbsp;&nbsp;</span></h2>
         <div class="owl-carousel">
             <div class="item">
@@ -145,7 +145,7 @@
         </div>
     </section>
 
-    <section class="form">
+    <section class="form section-container">
         <div class="form-container">
             <h2 class="form-title"><span class="line-through">&nbsp;&nbsp;</span>Request a call back<span class="line-through">&nbsp;&nbsp;</span></h2>
             <form class="callback-form">
@@ -163,20 +163,20 @@
     </section>
 
     <section class="contact-and-footer" id="contact">
-        <section class="contact">
-            <div class="address">
+        <section class="contact section-container">
+            <div class="address contact-div">
                 <h3>About Shop</h3>
                 <p><i class="fa-solid fa-location-dot"></i>Address</p>
                 <p><i class="fa-solid fa-phone"></i>+011234567890</p>
                 <p><i class="fa-solid fa-envelope"></i>mail@domain.com</p>
             </div>
 
-            <div class="information">
+            <div class="information contact-div">
                 <h3>Informations</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas volutpat turpis vitae libero tempor congue. Fusce laoreet, est et ornare pretium, nisi ex blandit nibh, sed vulputate lectus ante sed tellus.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas volutpat turpis vitae libero tempor congue.</p>
             </div>
 
-            <div class="instagram">
+            <div class="instagram contact-div">
                 <h3>Instagram</h3>
                 <i class="fa-regular fa-image col-1"></i>
                 <i class="fa-regular fa-image col-1"></i>
@@ -188,7 +188,7 @@
                 <i class="fa-regular fa-image col-1"></i>
             </div>
 
-            <div class="newsletter">
+            <div class="newsletter contact-div">
                 <h3>Newsletter</h3>
                 <form class="newsletter">
                     <input type="email" id="email-newsletter" name="email" placeholder="Enter your email" class="form-input" required/>
@@ -211,9 +211,25 @@
         $(document).ready(function(){ 
             $(".owl-carousel").owlCarousel({ 
                 items: 3, // Liczba kafelków wyświetlanych jednocześnie 
-                loop: true, // Powtarzanie karuzeli 
+                loop: false, // Powtarzanie karuzeli 
                 margin: 10, // Odstęp między kafelkami 
-                nav: true // Przyciski nawigacyjne 
+                nav: true, // Przyciski nawigacyjne
+                responsiveClass:true,
+                responsive:{
+                    0:{
+                    items:1,
+                    nav:true
+                    },
+                    700:{
+                    items:2,
+                    nav:true,
+                    },
+                    1000:{
+                    items:3,
+                    nav:true,
+                    loop:false
+                    }
+                } 
             }); 
         }); 
     </script>
